@@ -18,3 +18,8 @@
 input {
   width: 200px;
  }
+span {
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+}

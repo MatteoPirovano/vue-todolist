@@ -17,7 +17,11 @@ var toDoList = new Vue (
     methods: {
       addToDo : function () {
         this.list.push(this.newToDo);
+        this.newToDo = '';
       }
+      // delete: function() {
+      //   this.list.splice(index, 1);
+      // }
     }
   }
 );

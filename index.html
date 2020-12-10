@@ -11,10 +11,10 @@
 <body>
   <div id="root">
     <div class="todo_list">
-      <input type="text" name="task" v-model="newToDo" placeholder="Nuovo promemoria">
-      <button type="button" name="button" @click="addToDo"> Invio</button>
+      <input type="text" name="task" v-model="newToDo" placeholder="Nuovo promemoria" v-on:keyup.enter="addToDo">
+      <button type="button" name="button" v-on:click="addToDo"> Invio</button>
       <ul class="list_style">
-        <li v-for="newTask in list">{{newTask}}</li>
+        <li v-for="(newTask, index) in list">{{newTask}} <span>X</span></li>
       </ul>
     </div>
   </div>
