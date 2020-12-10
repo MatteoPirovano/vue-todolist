@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
   <title>Document</title>
@@ -11,11 +14,15 @@
 <body>
   <div id="root">
     <div class="todo_list">
-      <input type="text" name="task" v-model="newToDo" placeholder="Nuovo promemoria" v-on:keyup.enter="addToDo">
-      <button type="button" name="button" v-on:click="addToDo"> Invio</button>
+      <h1>Todo list</h1>
+      <input type="text" name="task" v-model="newToDo" v-on:keyup.enter="addToDo">
+      <span v-on:click="addToDo" class="plus"><i class="fas fa-plus-circle"></i></span>
+      <!-- <button type="button" name="button" v-on:click="addToDo"> Invio</button> -->
       <ul class="list_style">
         <li v-for="(newTask, index) in list">{{newTask}}
-           <span @click="deleteToDo(index)" >X</span>
+           <span @click="deleteToDo(index)" >
+             <i class="fas fa-minus-circle"></i>
+           </span>
          </li>
       </ul>
     </div>

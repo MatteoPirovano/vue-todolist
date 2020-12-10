@@ -2,24 +2,52 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 #root {
   display: flex;
   height: 100vh;
-  background: lightgray;
+  background: #121212;
+}
+h1{
+  text-align: center;
+  margin: 15px 0;
+  font-size: 40px;
+}
+.plus {
+  font-size: 20px;
+  color: green;
 }
 .todo_list {
   min-height: 400px;
   min-width: 400px;
   margin: auto;
   padding: 15px;
-  border: 1px solid black;
+  border-radius: 10px;
+  background-color: lightgray;
+  box-shadow: 0 0 15px #FFFFFF;
 }
 input {
-  width: 200px;
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  box-shadow: 0 0 7px #000000 inset;
  }
+.list_style {
+  list-style: none;
+  font-size: 25px;
+  font-weight: 700;
+}
+li {
+margin: 10px 0;
+display: flex;
+justify-content: space-between;
+}
 span {
   font-weight: bold;
   color: red;
   cursor: pointer;
+  font-size: 20px;
 }
