@@ -14,7 +14,9 @@
       <input type="text" name="task" v-model="newToDo" placeholder="Nuovo promemoria" v-on:keyup.enter="addToDo">
       <button type="button" name="button" v-on:click="addToDo"> Invio</button>
       <ul class="list_style">
-        <li v-for="(newTask, index) in list">{{newTask}} <span>X</span></li>
+        <li v-for="(newTask, index) in list">{{newTask}}
+           <span @click="deleteToDo(index)" >X</span>
+         </li>
       </ul>
     </div>
   </div>
